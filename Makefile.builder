@@ -19,9 +19,6 @@ WIN_CROSS_POSTBUILD_CMD := rm -f advertise-tools.exe
 endif
 
 copy-components:
-	mkdir -p $(CHROOT_DIR)/$(DIST_SRC)/components
-	cp $(SRC_DIR)/*/*.msm $(CHROOT_DIR)/$(DIST_SRC)/components/
-	cp $(SRC_DIR)/*/windows/*.msm $(CHROOT_DIR)/$(DIST_SRC)/components/
 	mkdir -p $(CHROOT_DIR)/$(DIST_SRC)/new-versions
 	for c in $(WIN_BUILD_DEPS); do \
 		cp $(SRC_DIR)/$$c/version \
